@@ -28,14 +28,14 @@ const AtelierButton = () => {
                 <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-bold">Repair & Coffee</p>
-                  <p>Rue des Tanneurs 62</p>
-                  <p>1000 Bruxelles</p>
+                  <p>Chau. de Charleroi 188</p>
+                  <p>1060 Saint-Gilles</p>
                   <p className="text-muted-foreground text-sm mt-1">du lundi au vendredi de 10h à 18h</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                <span>+32 (0)2 669 04 05</span>
+                <span>02 538 13 85</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
@@ -44,7 +44,7 @@ const AtelierButton = () => {
                 </a>
               </div>
               <p className="text-muted-foreground text-sm mt-4">
-                🅿️ Notre parking visiteurs se situe dans la cour de l'atelier, à la même adresse.
+                🅿️ Parking disponible à proximité.
               </p>
             </div>
           </div>

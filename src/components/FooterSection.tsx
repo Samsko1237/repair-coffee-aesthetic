@@ -24,9 +24,9 @@ const FooterSection = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <div className="space-y-2 text-sm opacity-80">
-              <p>Rue des Tanneurs 62, 1000 Bruxelles</p>
+              <p>Chau. de Charleroi 188, 1060 Saint-Gilles</p>
               <p>du lundi au vendredi de 10h à 18h</p>
-              <p>+32 (0)2 669 04 05</p>
+              <p>02 538 13 85</p>
               <p>
                 <a href="mailto:contact@repairandcoffee.be" className="text-primary hover:underline">
                   contact@repairandcoffee.be
@@ -42,6 +42,20 @@ const FooterSection = () => {
               <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
             </div>
           </div>
+        </div>
+
+        {/* Google Maps */}
+        <div className="mt-12 rounded-xl overflow-hidden border border-dark-border">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.9!2d4.346!3d50.831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c4e8c5a1b9c7%3A0x0!2sChau.+de+Charleroi+188%2C+1060+Saint-Gilles!5e0!3m2!1sfr!2sbe!4v1700000000000"
+            width="100%"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Repair &amp; Coffee - Chau. de Charleroi 188, 1060 Saint-Gilles"
+          />
         </div>
 
         <div className="border-t border-dark-border mt-12 pt-6 text-center text-xs opacity-50">
