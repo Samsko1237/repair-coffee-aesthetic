@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, DollarSign, ShieldCheck, Phone } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import RepairCard from "@/components/RepairCard";
+import RepairTable from "@/components/RepairTable";
 import { iphoneModels } from "@/data/repairData";
 
 const RepairDetail = () => {
@@ -107,10 +107,8 @@ const RepairDetail = () => {
           Réparations & tarifs
         </motion.h2>
 
-        <div className="grid gap-3 sm:gap-4 max-w-3xl">
-          {model.repairs.map((repair, i) => (
-            <RepairCard key={repair.id} repair={repair} index={i} />
-          ))}
+        <div className="max-w-3xl">
+          <RepairTable repairs={model.repairs} />
         </div>
 
         {/* CTA */}

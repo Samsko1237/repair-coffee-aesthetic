@@ -1,9 +1,9 @@
 import { useState, useMemo, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, X, ChevronDown, Phone, ShieldCheck, DollarSign, Zap } from "lucide-react";
+import { Search, X, ChevronDown, Phone, ShieldCheck, DollarSign } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import RepairCard from "@/components/RepairCard";
+import RepairTable from "@/components/RepairTable";
 import { iphoneModels } from "@/data/repairData";
 
 const Reparations = () => {
@@ -175,37 +175,8 @@ const Reparations = () => {
                 </button>
               </div>
 
-              {/* Liste des réparations */}
-              <div className="grid gap-3 sm:gap-4">
-                {selectedModel.repairs.map((repair, i) => (
-                  <RepairCard key={repair.id} repair={repair} index={i} />
-                ))}
-              </div>
-
-              {/* Extras — uniquement si le modèle en a */}
-              {selectedModel.extras && selectedModel.extras.length > 0 && (
-                <motion.div
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  className="mt-6 rounded-2xl border border-primary/20 bg-primary/5 px-5 py-4 space-y-2"
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <Zap className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-display font-semibold text-primary">
-                      Options supplémentaires
-                    </span>
-                  </div>
-                  {selectedModel.extras.map((extra, i) => (
-                    <div key={i} className="flex items-center justify-between gap-4">
-                      <span className="text-sm text-foreground font-body">{extra.label}</span>
-                      <span className="flex-shrink-0 text-sm font-display font-bold text-primary">
-                        + {extra.price}€
-                      </span>
-                    </div>
-                  ))}
-                </motion.div>
-              )}
+              {/* Tableau des réparations */}
+              <RepairTable repairs={selectedModel.repairs} />
 
               {/* CTA contact */}
               <motion.div
@@ -235,9 +206,6 @@ const Reparations = () => {
               exit={{ opacity: 0 }}
               className="text-center py-16 text-muted-foreground"
             >
-              <div className="w-16 h-16 rounded-2xl glass flex items-center justify-center mx-auto mb-4 text-2xl">
-                📱
-              </div>
               <p className="font-display text-sm">Sélectionnez un modèle pour voir les tarifs</p>
             </motion.div>
           )}
